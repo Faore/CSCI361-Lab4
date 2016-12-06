@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-11-03, 17:00, # CodeGen: 1
+**     Date/Time   : 2016-12-06, 16:06, # CodeGen: 20
 **     Abstract    :
 **
 **     Settings    :
@@ -146,6 +146,19 @@ extern volatile uint8_t SR_reg;        /* Current FAULTMASK register */
 /*lint -esym(765,SR_lock) Disable MISRA rule (8.10) checking for symbols (SR_lock). The SR_reg is used in inline assembler. */
 extern volatile uint8_t SR_lock;
 
+
+/* {Default RTOS Adapter} ISR function prototype */
+PE_ISR(Cpu_ivINT_PORTC_PORTD);
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTC_PORTD (component MKL46Z256MC4)
+**
+**     Description :
+**         This ISR services the ivINT_PORTC_PORTD interrupt shared by 
+**         several components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
 
 /*
 ** ===================================================================

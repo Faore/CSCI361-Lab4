@@ -6,6 +6,7 @@
 C_SRCS += \
 ../Generated_Code/Cpu.c \
 ../Generated_Code/GPIO1.c \
+../Generated_Code/GPIO2.c \
 ../Generated_Code/LED_GREEN.c \
 ../Generated_Code/LED_RED.c \
 ../Generated_Code/PE_LDD.c \
@@ -19,6 +20,7 @@ C_SRCS += \
 OBJS += \
 ./Generated_Code/Cpu.o \
 ./Generated_Code/GPIO1.o \
+./Generated_Code/GPIO2.o \
 ./Generated_Code/LED_GREEN.o \
 ./Generated_Code/LED_RED.o \
 ./Generated_Code/PE_LDD.o \
@@ -32,6 +34,7 @@ OBJS += \
 C_DEPS += \
 ./Generated_Code/Cpu.d \
 ./Generated_Code/GPIO1.d \
+./Generated_Code/GPIO2.d \
 ./Generated_Code/LED_GREEN.d \
 ./Generated_Code/LED_RED.d \
 ./Generated_Code/PE_LDD.d \

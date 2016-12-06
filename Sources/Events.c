@@ -99,7 +99,7 @@ void TI1_OnInterrupt(LDD_TUserData *UserDataPtr)
 void GPIO1_OnPortEvent(LDD_TUserData *UserDataPtr)
 //calls the increment function every time button is pressed
 {
-	handleButtonPress();
+	handleRightButtonPress();
 }
 
 /*
@@ -225,6 +225,29 @@ void TSS1_fCallBack0(TSS_CONTROL_ID u8ControlId)
 
   (void) u8ControlId;
   return;
+}
+
+/*
+** ===================================================================
+**     Event       :  GPIO2_OnPortEvent (module Events)
+**
+**     Component   :  GPIO2 [GPIO_LDD]
+*/
+/*!
+**     @brief
+**         Called if defined event on any pin of the port occured.
+**         OnPortEvent event and GPIO interrupt must be enabled. See
+**         SetEventMask() and GetEventMask() methods. This event is
+**         enabled if [Interrupt service/event] is Enabled and disabled
+**         if [Interrupt service/event] is Disabled.
+**     @param
+**         UserDataPtr     - Pointer to RTOS device
+**                           data structure pointer.
+*/
+/* ===================================================================*/
+void GPIO2_OnPortEvent(LDD_TUserData *UserDataPtr)
+{
+  handleLeftButtonPress();
 }
 
 /* END Events */

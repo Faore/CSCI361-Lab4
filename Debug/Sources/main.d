@@ -30,7 +30,8 @@ Sources/main.o: ../Sources/main.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_DataTypes.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_Sensor.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/derivative.h \
- M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h
+ M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h \
+ M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h:
 
@@ -95,3 +96,5 @@ M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_Sensor.h:
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/derivative.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h:
+
+M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h:

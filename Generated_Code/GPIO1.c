@@ -7,7 +7,7 @@
 **     Version     : Component 01.128, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-12-06, 15:41, # CodeGen: 18
+**     Date/Time   : 2016-12-06, 16:06, # CodeGen: 20
 **     Abstract    :
 **         The HAL GPIO component will provide a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -19,24 +19,16 @@
 **          Component name                                 : GPIO1
 **          Port                                           : PTC
 **          Port width                                     : 32 bits
-**          Mask of allocated pins                         : 0x1008
+**          Mask of allocated pins                         : 0x8
 **          Interrupt service/event                        : Enabled
 **            Interrupt                                    : INT_PORTC_PORTD
 **            Interrupt priority                           : medium priority
-**          Bit fields                                     : 2
+**          Bit fields                                     : 1
 **            Bit field                                    : 
 **              Field name                                 : SW1
 **              Pins                                       : 1
 **                Pin                                      : 
 **                  Pin                                    : LCD_P23/PTC3/LLWU_P7/UART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK
-**                  Pin signal                             : 
-**                  Initial pin direction                  : Input
-**                  Initial pin event                      : Falling edge
-**            Bit field                                    : 
-**              Field name                                 : SW3
-**              Pins                                       : 1
-**                Pin                                      : 
-**                  Pin                                    : LCD_P32/PTC12/TPM_CLKIN0
 **                  Pin signal                             : 
 **                  Initial pin direction                  : Input
 **                  Initial pin event                      : Falling edge
@@ -150,8 +142,8 @@ LDD_TDeviceData* GPIO1_Init(LDD_TUserData *UserDataPtr)
   /* Interrupt vector(s) allocation */
   /* {Default RTOS Adapter} Set interrupt vector: IVT is static, ISR parameter is passed by the global variable */
   INT_PORTC_PORTD__DEFAULT_RTOS_ISRPARAM = DeviceDataPrv;
-  /* GPIOC_PDDR: PDD&=~0x1008 */
-  GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x1008));
+  /* GPIOC_PDDR: PDD&=~8 */
+  GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x08));
   /* Initialization of Port Control registers */
   /* PORTC_PCR3: ISF=0,MUX=1 */
   PORTC_PCR3 = (uint32_t)((PORTC_PCR3 & (uint32_t)~(uint32_t)(
@@ -160,13 +152,6 @@ LDD_TDeviceData* GPIO1_Init(LDD_TUserData *UserDataPtr)
                )) | (uint32_t)(
                 PORT_PCR_MUX(0x01)
                ));
-  /* PORTC_PCR12: ISF=0,MUX=1 */
-  PORTC_PCR12 = (uint32_t)((PORTC_PCR12 & (uint32_t)~(uint32_t)(
-                 PORT_PCR_ISF_MASK |
-                 PORT_PCR_MUX(0x06)
-                )) | (uint32_t)(
-                 PORT_PCR_MUX(0x01)
-                ));
   /* PORTC_PCR3: ISF=1,IRQC=0x0A */
   PORTC_PCR3 = (uint32_t)((PORTC_PCR3 & (uint32_t)~(uint32_t)(
                 PORT_PCR_IRQC(0x05)
@@ -174,13 +159,6 @@ LDD_TDeviceData* GPIO1_Init(LDD_TUserData *UserDataPtr)
                 PORT_PCR_ISF_MASK |
                 PORT_PCR_IRQC(0x0A)
                ));
-  /* PORTC_PCR12: ISF=1,IRQC=0x0A */
-  PORTC_PCR12 = (uint32_t)((PORTC_PCR12 & (uint32_t)~(uint32_t)(
-                 PORT_PCR_IRQC(0x05)
-                )) | (uint32_t)(
-                 PORT_PCR_ISF_MASK |
-                 PORT_PCR_IRQC(0x0A)
-                ));
   /* NVIC_IPR7: PRI_31=0x80 */
   NVIC_IPR7 = (uint32_t)((NVIC_IPR7 & (uint32_t)~(uint32_t)(
                NVIC_IP_PRI_31(0x7F)
@@ -235,19 +213,6 @@ void GPIO1_SetFieldValue(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_TBitField Fiel
       );
       break;
     }
-    case SW3: {                        /* bit field #1 */
-      GPIO_PDD_SetPortDataOutput(GPIO1_MODULE_BASE_ADDRESS,
-        (
-          GPIO_PDD_GetPortDataOutput(GPIO1_MODULE_BASE_ADDRESS)
-          & ((GPIO1_TPortValue)(~((GPIO1_TPortValue)GPIO1_SW3_MASK)))
-        )
-        | (
-          ((GPIO1_TPortValue)(Value << GPIO1_SW3_START_BIT))
-          & ((GPIO1_TPortValue)GPIO1_SW3_MASK)
-        )
-      );
-      break;
-    }
     default:
       break;                           /* Invalid Field is not treated, result is undefined */
   } /* switch (Field) */
@@ -289,16 +254,6 @@ GPIO1_TFieldValue GPIO1_GetFieldValue(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_T
             & (GPIO1_TPortValue)GPIO1_SW1_MASK
           )
           >> GPIO1_SW1_START_BIT
-        );
-    }
-    case SW3: {                        /* bit field #1 */
-      return
-        (GPIO1_TFieldValue)(
-          (
-            GPIO_PDD_GetPortDataInput(GPIO1_MODULE_BASE_ADDRESS)
-            & (GPIO1_TPortValue)GPIO1_SW3_MASK
-          )
-          >> GPIO1_SW3_START_BIT
         );
     }
     default:
@@ -345,13 +300,6 @@ void GPIO1_ClearFieldBits(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_TBitField Fie
       );
       break;
     }
-    case SW3: {                        /* bit field #1 */
-      GPIO_PDD_ClearPortDataOutputMask(GPIO1_MODULE_BASE_ADDRESS,
-        ((GPIO1_TPortValue)GPIO1_SW3_MASK)
-        & ((GPIO1_TPortValue)(Mask << GPIO1_SW3_START_BIT))
-      );
-      break;
-    }
     default:
       break;                           /* Invalid Field is not treated, result is undefined */
   } /* switch (Field) */
@@ -392,13 +340,6 @@ void GPIO1_SetFieldBits(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_TBitField Field
       GPIO_PDD_SetPortDataOutputMask(GPIO1_MODULE_BASE_ADDRESS,
         ((GPIO1_TPortValue)GPIO1_SW1_MASK)
         & ((GPIO1_TPortValue)(Mask << GPIO1_SW1_START_BIT))
-      );
-      break;
-    }
-    case SW3: {                        /* bit field #1 */
-      GPIO_PDD_SetPortDataOutputMask(GPIO1_MODULE_BASE_ADDRESS,
-        ((GPIO1_TPortValue)GPIO1_SW3_MASK)
-        & ((GPIO1_TPortValue)(Mask << GPIO1_SW3_START_BIT))
       );
       break;
     }
@@ -445,13 +386,6 @@ void GPIO1_ToggleFieldBits(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_TBitField Fi
       );
       break;
     }
-    case SW3: {                        /* bit field #1 */
-      GPIO_PDD_TogglePortDataOutputMask(GPIO1_MODULE_BASE_ADDRESS,
-        ((GPIO1_TPortValue)GPIO1_SW3_MASK)
-        & ((GPIO1_TPortValue)(Mask << GPIO1_SW3_START_BIT))
-      );
-      break;
-    }
     default:
       break;                           /* Invalid Field is not treated, result is undefined */
   } /* switch (Field) */
@@ -467,7 +401,7 @@ void GPIO1_ToggleFieldBits(LDD_TDeviceData *DeviceDataPtr, LDD_GPIO_TBitField Fi
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-PE_ISR(GPIO1_Interrupt)
+void GPIO1_Interrupt(void)
 {
   /* {Default RTOS Adapter} ISR parameter is passed through the global variable */
   GPIO1_TDeviceDataPtr DeviceDataPrv = INT_PORTC_PORTD__DEFAULT_RTOS_ISRPARAM;
@@ -476,8 +410,10 @@ PE_ISR(GPIO1_Interrupt)
   State = (GPIO1_TPortValue)(PORT_PDD_GetInterruptFlags(GPIO1_PORTCONTROL_BASE_ADDRESS)
           & ((GPIO1_TPortValue)GPIO1_ALLOCATED_PINS_MASK)); /* Retrieve flags */
   DeviceDataPrv->EventFlags |= State;
-  PORT_PDD_ClearInterruptFlags(GPIO1_PORTCONTROL_BASE_ADDRESS, State); /* Clears flags */
-  GPIO1_OnPortEvent(DeviceDataPrv->UserData); /* Call OnPortEvent event */
+  if (State) {
+    PORT_PDD_ClearInterruptFlags(GPIO1_PORTCONTROL_BASE_ADDRESS, State); /* Clears flags */
+    GPIO1_OnPortEvent(DeviceDataPrv->UserData); /* Call OnPortEvent event */
+  }
 }
 
 /* END GPIO1. */

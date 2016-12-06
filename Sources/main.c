@@ -38,6 +38,7 @@
 #include "PTC.h"
 #include "GPIO1.h"
 #include "TSS1.h"
+#include "GPIO2.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -49,7 +50,9 @@ void respondToTimerInterrupt(void);
 extern int timerUpdate(int);
 extern int timerDoneCheck(int);
 void writeToLCD(int);
-void handleButtonPress();
+void handleLeftButtonPress();
+void handleRightButtonPress();
+
 
 int mode = 2; //0: Counting Down, 1: Paused, 2: Setup, 3: Finish
 
@@ -97,13 +100,24 @@ void respondToTimerInterrupt(void){
 	}
 }
 
-void handleButtonPress() {
+void handleLeftButtonPress() {
 	//In setup, change to count down
 	if(mode == 2) {
 		mode = 0;
 	}
-	if(mode == 3) {
+	//Reset
+	else {
 		mode = 2;
+	}
+}
+
+void handleRightButtonPress() {
+	//Counting Down
+	if(mode == 0) {
+		mode = 1;
+	}
+	if(mode == 1) {
+		mode = 0;
 	}
 }
 

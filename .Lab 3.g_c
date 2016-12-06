@@ -19,7 +19,7 @@
         <Line>PE_Const</Line>
         <Line>IO_Map</Line>
       </GenSharedModules>
-      <ShrdHeaderAge0>1231461904</ShrdHeaderAge0>
+      <ShrdHeaderAge0>1233551563</ShrdHeaderAge0>
       <ShrdCodeAge0>-1</ShrdCodeAge0>
       <ShrdAsemblAge0>-1</ShrdAsemblAge0>
       <ShrdHeaderAge1>1231258325</ShrdHeaderAge1>
@@ -31,7 +31,7 @@
       <ShrdHeaderAge3>1231258325</ShrdHeaderAge3>
       <ShrdCodeAge3>-1</ShrdCodeAge3>
       <ShrdAsemblAge3>-1</ShrdAsemblAge3>
-      <GenExtraFiles lines_count="35">
+      <GenExtraFiles lines_count="36">
         <Line>Documentation\doxygen\LED_RED_component.txt</Line>
         <Line>Documentation\doxygen\LED_GREEN_component.txt</Line>
         <Line>Documentation\doxygen\SegLCD1_component.txt</Line>
@@ -58,6 +58,7 @@
         <Line>Sources\TSS\TSS_DataTypes.h</Line>
         <Line>Sources\TSS\TSS_API.h</Line>
         <Line>Sources\TSS\libTSS_KXX_M0.a</Line>
+        <Line>Documentation\doxygen\GPIO2_component.txt</Line>
         <Line>Documentation\doxygen\Lab 3_project.txt</Line>
         <Line>Documentation\doxygen\RoutingReport_component.txt</Line>
         <Line>Documentation\doxygen\pex.doxyfile</Line>
@@ -68,8 +69,8 @@
         <Line>Project_Settings\Startup_Code\startup.c</Line>
         <Line>Generated_Code\Vectors.c</Line>
       </GenExtraFiles>
-      <GenExtraFileSrcDir33>lib\Kinetis\startup\</GenExtraFileSrcDir33>
-      <GenExtraFileSrcDir29>Repositories\lib\doxygen\</GenExtraFileSrcDir29>
+      <GenExtraFileSrcDir34>lib\Kinetis\startup\</GenExtraFileSrcDir34>
+      <GenExtraFileSrcDir30>Repositories\lib\doxygen\</GenExtraFileSrcDir30>
       <GenExtraFileSrcDir25>lib\TSS_Library\TSS_3_0_1\lib_cw_gcc\</GenExtraFileSrcDir25>
       <GenExtraFileSrcDir24>lib\TSS_Library\TSS_3_0_1\shared\</GenExtraFileSrcDir24>
       <GenExtraFileSrcDir23>lib\TSS_Library\TSS_3_0_1\shared\</GenExtraFileSrcDir23>
@@ -105,16 +106,17 @@
       <XtraAge22>1233496940</XtraAge22>
       <XtraAge23>1233496940</XtraAge23>
       <XtraAge24>1233496940</XtraAge24>
-      <XtraAge30>1231461296</XtraAge30>
-      <XtraAge31>1233496943</XtraAge31>
-      <XtraAge33>1231258325</XtraAge33>
-      <XtraAge34>1233496943</XtraAge34>
-      <GenExtraFileType34>4</GenExtraFileType34>
-      <GenExtraFileType33>5</GenExtraFileType33>
+      <XtraAge31>1233551563</XtraAge31>
+      <XtraAge32>1233551563</XtraAge32>
+      <XtraAge34>1231258325</XtraAge34>
+      <XtraAge35>1233551563</XtraAge35>
+      <GenExtraFileType35>4</GenExtraFileType35>
+      <GenExtraFileType34>5</GenExtraFileType34>
+      <GenExtraFileType33>4</GenExtraFileType33>
       <GenExtraFileType32>4</GenExtraFileType32>
       <GenExtraFileType31>4</GenExtraFileType31>
-      <GenExtraFileType30>4</GenExtraFileType30>
-      <GenExtraFileType29>5</GenExtraFileType29>
+      <GenExtraFileType30>5</GenExtraFileType30>
+      <GenExtraFileType29>4</GenExtraFileType29>
       <GenExtraFileType28>4</GenExtraFileType28>
       <GenExtraFileType27>4</GenExtraFileType27>
       <GenExtraFileType26>4</GenExtraFileType26>
@@ -400,7 +402,8 @@
       <GenEventModules lines_count="1">
         <Line>Events</Line>
       </GenEventModules>
-      <GenMethodsInEvents lines_count="6">
+      <GenMethodsInEvents lines_count="7">
+        <Line>GPIO2_OnPortEvent</Line>
         <Line>TSS1_fOnFault</Line>
         <Line>TSS1_fOnInit</Line>
         <Line>TSS1_fCallBack0</Line>
@@ -408,10 +411,11 @@
         <Line>TI1_OnInterrupt</Line>
         <Line>Cpu_OnNMIINT</Line>
       </GenMethodsInEvents>
-      <GenAllModules lines_count="14">
+      <GenAllModules lines_count="15">
         <Line>Cpu</Line>
         <Line>Events</Line>
         <Line>GPIO1</Line>
+        <Line>GPIO2</Line>
         <Line>IO_Map</Line>
         <Line>LED_GREEN</Line>
         <Line>LED_RED</Line>
@@ -425,7 +429,7 @@
         <Line>TU1</Line>
       </GenAllModules>
       <GenExternModules lines_count="0" />
-      <GenBeanModules lines_count="8">
+      <GenBeanModules lines_count="9">
         <Line>LED_RED</Line>
         <Line>LED_GREEN</Line>
         <Line>SegLCD1</Line>
@@ -434,11 +438,12 @@
         <Line>PTC</Line>
         <Line>GPIO1</Line>
         <Line>TSS1</Line>
+        <Line>GPIO2</Line>
       </GenBeanModules>
     </GenFiles>
     <SignalListFile>Documentation\Lab 3_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>18</ProjectModificationStamp>
+    <ProjectModificationStamp>19</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
@@ -446,8 +451,8 @@
     <GenComponentVersion>01.002</GenComponentVersion>
     <GenDriverVersion>01.04</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1231259671</HeaderAge>
-    <CodeAge>1233551032</CodeAge>
+    <HeaderAge>1233551563</HeaderAge>
+    <CodeAge>1233551563</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>11</GenNumMethods>
     <SetClockConfiguration>false</SetClockConfiguration>
@@ -1019,8 +1024,8 @@
     <GenComponentVersion>01.128</GenComponentVersion>
     <GenDriverVersion>01.08</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1233550640</HeaderAge>
-    <CodeAge>1233550640</CodeAge>
+    <HeaderAge>1233551563</HeaderAge>
+    <CodeAge>1233551563</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>27</GenNumMethods>
     <Init>true</Init>
@@ -1066,99 +1071,99 @@
       <MethodPos0>Init</MethodPos0>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>170</LineBeg>
-      <LineEnd>190</LineEnd>
+      <LineBeg>158</LineBeg>
+      <LineEnd>178</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos1>SetFieldValue</MethodPos1>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>191</LineBeg>
-      <LineEnd>216</LineEnd>
+      <LineBeg>179</LineBeg>
+      <LineEnd>204</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos2>GetFieldValue</MethodPos2>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>217</LineBeg>
-      <LineEnd>242</LineEnd>
+      <LineBeg>205</LineBeg>
+      <LineEnd>230</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos3>ClearFieldBits</MethodPos3>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>243</LineBeg>
-      <LineEnd>271</LineEnd>
+      <LineBeg>231</LineBeg>
+      <LineEnd>259</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos4>SetFieldBits</MethodPos4>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>272</LineBeg>
-      <LineEnd>300</LineEnd>
+      <LineBeg>260</LineBeg>
+      <LineEnd>288</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos5>ToggleFieldBits</MethodPos5>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>301</LineBeg>
-      <LineEnd>329</LineEnd>
+      <LineBeg>289</LineBeg>
+      <LineEnd>317</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos6>Interrupt</MethodPos6>
       <MethodType>internal_method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>330</LineBeg>
-      <LineEnd>342</LineEnd>
+      <LineBeg>318</LineBeg>
+      <LineEnd>330</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos7>Init</MethodPos7>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>116</LineBeg>
-      <LineEnd>195</LineEnd>
+      <LineBeg>108</LineBeg>
+      <LineEnd>173</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos8>SetFieldValue</MethodPos8>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>196</LineBeg>
-      <LineEnd>254</LineEnd>
+      <LineBeg>174</LineBeg>
+      <LineEnd>219</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos9>GetFieldValue</MethodPos9>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>255</LineBeg>
-      <LineEnd>308</LineEnd>
+      <LineBeg>220</LineBeg>
+      <LineEnd>263</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos10>ClearFieldBits</MethodPos10>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>309</LineBeg>
-      <LineEnd>358</LineEnd>
+      <LineBeg>264</LineBeg>
+      <LineEnd>306</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos11>SetFieldBits</MethodPos11>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>359</LineBeg>
-      <LineEnd>408</LineEnd>
+      <LineBeg>307</LineBeg>
+      <LineEnd>349</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos12>ToggleFieldBits</MethodPos12>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>409</LineBeg>
-      <LineEnd>458</LineEnd>
+      <LineBeg>350</LineBeg>
+      <LineEnd>392</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos13>Interrupt</MethodPos13>
       <MethodType>internal_method</MethodType>
       <ModuleType>Code</ModuleType>
-      <LineBeg>459</LineBeg>
-      <LineEnd>481</LineEnd>
+      <LineBeg>393</LineBeg>
+      <LineEnd>417</LineEnd>
     </MethodPos>
     <GenExtraFilesCount>1</GenExtraFilesCount>
     <ExtraFile0>Documentation\doxygen\GPIO1_component.txt</ExtraFile0>
@@ -1278,6 +1283,156 @@
     <ExtraFile17>Sources\TSS\TSS_API.h</ExtraFile17>
     <ExtraFile18>Sources\TSS\libTSS_KXX_M0.a</ExtraFile18>
   </ComponentID_16>
+  <ComponentID_17>
+    <Generated>true</Generated>
+    <GenCompName>GPIO2</GenCompName>
+    <GenComponentVersion>01.128</GenComponentVersion>
+    <GenDriverVersion>01.08</GenDriverVersion>
+    <GenEventModule>Events</GenEventModule>
+    <HeaderAge>1233551563</HeaderAge>
+    <CodeAge>1233551563</CodeAge>
+    <AsemblAge>-1</AsemblAge>
+    <GenNumMethods>27</GenNumMethods>
+    <Init>true</Init>
+    <Deinit>false</Deinit>
+    <SetEventMask>false</SetEventMask>
+    <GetEventMask>false</GetEventMask>
+    <SetPortEventCondition>false</SetPortEventCondition>
+    <GetPortEventStatus>false</GetPortEventStatus>
+    <SetFieldEventCondition>false</SetFieldEventCondition>
+    <GetFieldEventStatus>false</GetFieldEventStatus>
+    <SetPortValue>false</SetPortValue>
+    <GetPortValue>false</GetPortValue>
+    <GetPortOutputValue>false</GetPortOutputValue>
+    <ClearPortBits>false</ClearPortBits>
+    <SetPortBits>false</SetPortBits>
+    <TogglePortBits>false</TogglePortBits>
+    <SetPortInputDirection>false</SetPortInputDirection>
+    <SetPortOutputDirection>false</SetPortOutputDirection>
+    <SetFieldValue>true</SetFieldValue>
+    <GetFieldValue>true</GetFieldValue>
+    <GetFieldOutputValue>false</GetFieldOutputValue>
+    <ClearFieldBits>true</ClearFieldBits>
+    <SetFieldBits>true</SetFieldBits>
+    <ToggleFieldBits>true</ToggleFieldBits>
+    <SetFieldInputDirection>false</SetFieldInputDirection>
+    <SetFieldOutputDirection>false</SetFieldOutputDirection>
+    <SetOperationMode>false</SetOperationMode>
+    <GetDriverState>false</GetDriverState>
+    <ConnectPin>false</ConnectPin>
+    <GenNumEvents>2</GenNumEvents>
+    <OnPortEvent_Selected>3</OnPortEvent_Selected>
+    <OnPortEvent_Name>GPIO2_OnPortEvent</OnPortEvent_Name>
+    <OnPortEvent_Priority>interrupts disabled</OnPortEvent_Priority>
+    <OnFieldEvent_Selected>1</OnFieldEvent_Selected>
+    <OnFieldEvent_Name>GPIO2_OnFieldEvent</OnFieldEvent_Name>
+    <OnFieldEvent_Priority>interrupts disabled</OnFieldEvent_Priority>
+    <ISR_PortInterruptISRHandle />
+    <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+    <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+    <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+    <GenMethodPos>14</GenMethodPos>
+    <MethodPos>
+      <MethodPos0>Init</MethodPos0>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>158</LineBeg>
+      <LineEnd>178</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos1>SetFieldValue</MethodPos1>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>179</LineBeg>
+      <LineEnd>204</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos2>GetFieldValue</MethodPos2>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>205</LineBeg>
+      <LineEnd>230</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos3>ClearFieldBits</MethodPos3>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>231</LineBeg>
+      <LineEnd>259</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos4>SetFieldBits</MethodPos4>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>260</LineBeg>
+      <LineEnd>288</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos5>ToggleFieldBits</MethodPos5>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>289</LineBeg>
+      <LineEnd>317</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos6>Interrupt</MethodPos6>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>318</LineBeg>
+      <LineEnd>330</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos7>Init</MethodPos7>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>108</LineBeg>
+      <LineEnd>173</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos8>SetFieldValue</MethodPos8>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>174</LineBeg>
+      <LineEnd>219</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos9>GetFieldValue</MethodPos9>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>220</LineBeg>
+      <LineEnd>263</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos10>ClearFieldBits</MethodPos10>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>264</LineBeg>
+      <LineEnd>306</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos11>SetFieldBits</MethodPos11>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>307</LineBeg>
+      <LineEnd>349</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos12>ToggleFieldBits</MethodPos12>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>350</LineBeg>
+      <LineEnd>392</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos13>Interrupt</MethodPos13>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>393</LineBeg>
+      <LineEnd>417</LineEnd>
+    </MethodPos>
+    <GenExtraFilesCount>1</GenExtraFilesCount>
+    <ExtraFile0>Documentation\doxygen\GPIO2_component.txt</ExtraFile0>
+  </ComponentID_17>
   <UsedSrcFiles>
     <SrcFile0>Drivers\Common\CheckRegBits8_Rst.prg=1183486427</SrcFile0>
     <SrcFile1>Drivers\Kinetis\Init_FTFL_FlashConfig_KINETIS.prg=1183486058</SrcFile1>

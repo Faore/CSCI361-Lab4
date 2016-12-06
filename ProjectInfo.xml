@@ -58,6 +58,7 @@
     <GeneratedCs>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\Cpu.c</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\GPIO1.c</PathName>
+      <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\GPIO2.c</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\LED_GREEN.c</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\LED_RED.c</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\PE_LDD.c</PathName>
@@ -82,6 +83,7 @@
     <GeneratedHs>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\Cpu.h</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\GPIO1.h</PathName>
+      <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\GPIO2.h</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\IO_Map.h</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\LED_GREEN.h</PathName>
       <PathName>M:\Users\cetho\workspace.kds\Lab 3\Generated_Code\LED_RED.h</PathName>

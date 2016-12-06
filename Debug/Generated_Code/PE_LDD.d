@@ -19,7 +19,8 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_Sensor.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/derivative.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h \
- M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h
+ M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h \
+ ../Generated_Code/GPIO2.h
 
 ../Generated_Code/PE_LDD.h:
 
@@ -74,3 +75,5 @@ M:/Users/cetho/workspace.kds/Lab\ 3/Sources/derivative.h:
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h:
+
+../Generated_Code/GPIO2.h:

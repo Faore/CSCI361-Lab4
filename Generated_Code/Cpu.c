@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-12-06, 15:53, # CodeGen: 19
+**     Date/Time   : 2016-12-06, 16:06, # CodeGen: 20
 **     Abstract    :
 **
 **     Settings    :
@@ -267,6 +267,7 @@
 #include "PTC.h"
 #include "GPIO1.h"
 #include "TSS1.h"
+#include "GPIO2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -282,6 +283,22 @@ extern "C" {
 volatile uint8_t SR_reg;               /* Current value of the FAULTMASK register */
 volatile uint8_t SR_lock = 0x00U;      /* Lock */
 
+
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTC_PORTD (component MKL46Z256MC4)
+**
+**     Description :
+**         This ISR services the ivINT_PORTC_PORTD interrupt shared by 
+**         several components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+PE_ISR(Cpu_ivINT_PORTC_PORTD)
+{
+  GPIO1_Interrupt();                   /* Call the service routine */
+  GPIO2_Interrupt();                   /* Call the service routine */
+}
 
 /*
 ** ===================================================================
@@ -510,6 +527,8 @@ void PE_low_level_init(void)
 
   /* Write code here ... */
 
+  /* ### GPIO_LDD "GPIO2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)GPIO2_Init(NULL);
   __EI();
 }
   /* Flash configuration field */

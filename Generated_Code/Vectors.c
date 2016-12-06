@@ -6,7 +6,7 @@
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-12-05, 21:27, # CodeGen: 15
+**     Date/Time   : 2016-12-06, 16:06, # CodeGen: 20
 **     Abstract    :
 **
 **     Settings    :
@@ -63,6 +63,7 @@
   #include "PTC.h"
   #include "GPIO1.h"
   #include "TSS1.h"
+  #include "GPIO2.h"
   #include "Events.h"
 
 
@@ -129,7 +130,7 @@
     (tIsrFunc)&TU1_Interrupt,          /* 0x2C  0x000000B0   2   ivINT_LPTimer                 used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   2   ivINT_LCD                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2E  0x000000B8   -   ivINT_PORTA                   unused by PE */
-    (tIsrFunc)&GPIO1_Interrupt         /* 0x2F  0x000000BC   2   ivINT_PORTC_PORTD             used by PE */
+    (tIsrFunc)&Cpu_ivINT_PORTC_PORTD   /* 0x2F  0x000000BC   2   ivINT_PORTC_PORTD             used by PE */
     }
   };
   /*lint -restore Enable MISRA rule (11.4) checking. */

@@ -41,6 +41,7 @@
 #include "PTC.h"
 #include "GPIO1.h"
 #include "TSS1.h"
+#include "GPIO2.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -172,6 +173,26 @@ void TSS1_fCallBack0(TSS_CONTROL_ID u8ControlId);
 **     Returns     : Nothing
 ** ===================================================================
 */
+
+/*
+** ===================================================================
+**     Event       :  GPIO2_OnPortEvent (module Events)
+**
+**     Component   :  GPIO2 [GPIO_LDD]
+*/
+/*!
+**     @brief
+**         Called if defined event on any pin of the port occured.
+**         OnPortEvent event and GPIO interrupt must be enabled. See
+**         SetEventMask() and GetEventMask() methods. This event is
+**         enabled if [Interrupt service/event] is Enabled and disabled
+**         if [Interrupt service/event] is Disabled.
+**     @param
+**         UserDataPtr     - Pointer to RTOS device
+**                           data structure pointer.
+*/
+/* ===================================================================*/
+void GPIO2_OnPortEvent(LDD_TUserData *UserDataPtr);
 
 /* END Events */
 

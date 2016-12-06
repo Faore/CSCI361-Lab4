@@ -30,6 +30,7 @@
 - \subpage TI1
 - \subpage PTC
 - \subpage GPIO1
+- \subpage GPIO2
 
 */
 

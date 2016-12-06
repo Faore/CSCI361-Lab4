@@ -20,6 +20,7 @@ Generated_Code/Vectors.o: ../Generated_Code/Vectors.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/derivative.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h \
+ ../Generated_Code/GPIO2.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/Events.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PE_Types.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PE_Error.h \
@@ -32,7 +33,8 @@ Generated_Code/Vectors.o: ../Generated_Code/Vectors.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/TU1.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PTC.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO1.h \
- M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/TSS1.h
+ M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/TSS1.h \
+ M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h
 
 ../Generated_Code/Cpu.h:
 
@@ -86,6 +88,8 @@ M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h:
 
+../Generated_Code/GPIO2.h:
+
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/Events.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PE_Types.h:
@@ -111,3 +115,5 @@ M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PTC.h:
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO1.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/TSS1.h:
+
+M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h:

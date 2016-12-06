@@ -486,27 +486,17 @@ PE_DEBUGHALT();
       <Component_name v="GPIO1" />
       <Port v="PTC" />
       <Port_width v="32 bits" />
-      <Mask_of_allocated_pins v="4104" />
+      <Mask_of_allocated_pins v="8" />
       <boolgroup name="Interrupt service/event" v="Enabled">
         <Interrupt v="INT_PORTC_PORTD" />
         <Interrupt_priority v="medium priority" />
       </boolgroup>
-      <list name="Bit fields" v="2">
+      <list name="Bit fields" v="1">
         <group name="Bit field">
           <Field_name v="SW1" />
           <list name="Pins" v="1">
             <group name="Pin">
               <Pin v="LCD_P23/PTC3/LLWU_P7/UART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK" />
-              <boolgroup name="Initial pin direction" v="Input" />
-              <Initial_pin_event v="Falling edge" />
-            </group>
-          </list>
-        </group>
-        <group name="Bit field">
-          <Field_name v="SW3" />
-          <list name="Pins" v="1">
-            <group name="Pin">
-              <Pin v="LCD_P32/PTC12/TPM_CLKIN0" />
               <boolgroup name="Initial pin direction" v="Input" />
               <Initial_pin_event v="Falling edge" />
             </group>
@@ -729,6 +719,67 @@ PE_DEBUGHALT();
       <event name="fCallBack13" v="don&amp;apos;t generate code" />
       <event name="fCallBack14" v="don&amp;apos;t generate code" />
       <event name="fCallBack15" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="GPIO2" type="GPIO_LDD">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="GPIO2" />
+      <Port v="PTC" />
+      <Port_width v="32 bits" />
+      <Mask_of_allocated_pins v="4096" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Interrupt v="INT_PORTC_PORTD" />
+        <Interrupt_priority v="medium priority" />
+      </boolgroup>
+      <list name="Bit fields" v="1">
+        <group name="Bit field">
+          <Field_name v="SW3" />
+          <list name="Pins" v="1">
+            <group name="Pin">
+              <Pin v="LCD_P32/PTC12/TPM_CLKIN0" />
+              <boolgroup name="Initial pin direction" v="Input" />
+              <Initial_pin_event v="Falling edge" />
+            </group>
+          </list>
+        </group>
+      </list>
+      <group name="Initialization">
+        <group name="Event mask">
+          <OnPortEvent v="Enabled" />
+        </group>
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="don&amp;apos;t generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <SetPortEventCondition v="don&amp;apos;t generate code" />
+      <GetPortEventStatus v="don&amp;apos;t generate code" />
+      <SetPortValue v="don&amp;apos;t generate code" />
+      <GetPortValue v="don&amp;apos;t generate code" />
+      <ClearPortBits v="don&amp;apos;t generate code" />
+      <SetPortBits v="don&amp;apos;t generate code" />
+      <TogglePortBits v="don&amp;apos;t generate code" />
+      <SetPortInputDirection v="don&amp;apos;t generate code" />
+      <SetPortOutputDirection v="don&amp;apos;t generate code" />
+      <SetFieldValue v="generate code" />
+      <GetFieldValue v="generate code" />
+      <ClearFieldBits v="generate code" />
+      <SetFieldBits v="generate code" />
+      <ToggleFieldBits v="generate code" />
+      <SetFieldInputDirection v="don&amp;apos;t generate code" />
+      <SetFieldOutputDirection v="don&amp;apos;t generate code" />
+      <SetOperationMode v="don&amp;apos;t generate code" />
+      <GetDriverState v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnPortEvent" v="generate code">
+        <Event_procedure_name v="GPIO2_OnPortEvent" />
+      </event>
     </Events>
   </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>

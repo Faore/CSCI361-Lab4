@@ -6,7 +6,7 @@
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-12-05, 21:27, # CodeGen: 15
+**     Date/Time   : 2016-12-06, 16:06, # CodeGen: 20
 **     Abstract    :
 **
 **     Settings    :
@@ -69,6 +69,7 @@
 #include "PTC.h"
 #include "GPIO1.h"
 #include "TSS1.h"
+#include "GPIO2.h"
 
 
 /*

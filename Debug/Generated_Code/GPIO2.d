@@ -1,4 +1,4 @@
-Generated_Code/TSS1.o: ../Generated_Code/TSS1.c \
+Generated_Code/GPIO2.o: ../Generated_Code/GPIO2.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/Events.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PE_Types.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/PE_Error.h \
@@ -32,7 +32,7 @@ Generated_Code/TSS1.o: ../Generated_Code/TSS1.c \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/Cpu.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h \
  M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h \
- ../Generated_Code/TSS1.h
+ ../Generated_Code/GPIO2.h ../Generated_Code/IO_Map.h
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Sources/Events.h:
 
@@ -100,4 +100,6 @@ M:/Users/cetho/workspace.kds/Lab\ 3/Sources/TSS/TSS_API.h:
 
 M:/Users/cetho/workspace.kds/Lab\ 3/Generated_Code/GPIO2.h:
 
-../Generated_Code/TSS1.h:
+../Generated_Code/GPIO2.h:
+
+../Generated_Code/IO_Map.h:
