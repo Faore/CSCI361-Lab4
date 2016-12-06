@@ -272,8 +272,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x9a ./Sources/TSS/TSS_Freemaster.o
  .debug_macro   0x00000000     0x1497 ./Sources/TSS/TSS_Freemaster.o
  .debug_macro   0x00000000      0x53f ./Sources/TSS/TSS_Freemaster.o
- .debug_line    0x00000000      0x2be ./Sources/TSS/TSS_Freemaster.o
- .debug_str     0x00000000    0x40e02 ./Sources/TSS/TSS_Freemaster.o
+ .debug_line    0x00000000      0x2d6 ./Sources/TSS/TSS_Freemaster.o
+ .debug_str     0x00000000    0x40e0a ./Sources/TSS/TSS_Freemaster.o
  .comment       0x00000000       0x71 ./Sources/TSS/TSS_Freemaster.o
  .ARM.attributes
                 0x00000000       0x32 ./Sources/TSS/TSS_Freemaster.o
@@ -356,8 +356,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x53f ./Sources/TSS/TSS_SensorGPIO.o
  .debug_macro   0x00000000     0x1497 ./Sources/TSS/TSS_SensorGPIO.o
  .debug_macro   0x00000000       0x19 ./Sources/TSS/TSS_SensorGPIO.o
- .debug_line    0x00000000      0x2c1 ./Sources/TSS/TSS_SensorGPIO.o
- .debug_str     0x00000000    0x41f88 ./Sources/TSS/TSS_SensorGPIO.o
+ .debug_line    0x00000000      0x2d9 ./Sources/TSS/TSS_SensorGPIO.o
+ .debug_str     0x00000000    0x41f90 ./Sources/TSS/TSS_SensorGPIO.o
  .comment       0x00000000       0x71 ./Sources/TSS/TSS_SensorGPIO.o
  .ARM.attributes
                 0x00000000       0x32 ./Sources/TSS/TSS_SensorGPIO.o
@@ -397,8 +397,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x53f ./Sources/TSS/TSS_SensorTSI.o
  .debug_macro   0x00000000     0x1497 ./Sources/TSS/TSS_SensorTSI.o
  .debug_macro   0x00000000       0x27 ./Sources/TSS/TSS_SensorTSI.o
- .debug_line    0x00000000      0x2bf ./Sources/TSS/TSS_SensorTSI.o
- .debug_str     0x00000000    0x42eab ./Sources/TSS/TSS_SensorTSI.o
+ .debug_line    0x00000000      0x2d7 ./Sources/TSS/TSS_SensorTSI.o
+ .debug_str     0x00000000    0x42eb3 ./Sources/TSS/TSS_SensorTSI.o
  .comment       0x00000000       0x71 ./Sources/TSS/TSS_SensorTSI.o
  .ARM.attributes
                 0x00000000       0x32 ./Sources/TSS/TSS_SensorTSI.o
@@ -2248,66 +2248,66 @@ OUTPUT(Lab 3.elf elf32-littlearm)
  .debug_macro   0x000197a9      0x255 ./Generated_Code/TU1.o
  .debug_macro   0x000199fe      0x196 ./Generated_Code/Vectors.o
 
-.debug_line     0x00000000     0x4427
- .debug_line    0x00000000      0x494 ./Sources/lcd/LCD.o
- .debug_line    0x00000494      0x22c ./Sources/lcd/s401.o
- .debug_line    0x000006c0      0x34d ./Sources/TSS/TSS_Sensor.o
- .debug_line    0x00000a0d      0x563 ./Sources/TSS/TSS_SensorTSIL.o
- .debug_line    0x00000f70      0x2dc ./Sources/TSS/TSS_SystemSetupData.o
- .debug_line    0x0000124c      0x41c ./Sources/Events.o
- .debug_line    0x00001668       0x52 ./Sources/helper.o
- .debug_line    0x000016ba      0x402 ./Sources/main.o
- .debug_line    0x00001abc      0x3c2 ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x00001e7e      0x4bf ./Generated_Code/Cpu.o
- .debug_line    0x0000233d      0x474 ./Generated_Code/GPIO1.o
- .debug_line    0x000027b1      0x2b8 ./Generated_Code/LED_GREEN.o
- .debug_line    0x00002a69      0x2b4 ./Generated_Code/LED_RED.o
- .debug_line    0x00002d1d      0x3fc ./Generated_Code/PE_LDD.o
- .debug_line    0x00003119      0x1f9 ./Generated_Code/PTC.o
- .debug_line    0x00003312      0x294 ./Generated_Code/SegLCD1.o
- .debug_line    0x000035a6      0x3dc ./Generated_Code/TI1.o
- .debug_line    0x00003982      0x3e5 ./Generated_Code/TSS1.o
- .debug_line    0x00003d67      0x27e ./Generated_Code/TU1.o
- .debug_line    0x00003fe5      0x442 ./Generated_Code/Vectors.o
+.debug_line     0x00000000     0x448f
+ .debug_line    0x00000000      0x4a4 ./Sources/lcd/LCD.o
+ .debug_line    0x000004a4      0x23c ./Sources/lcd/s401.o
+ .debug_line    0x000006e0      0x365 ./Sources/TSS/TSS_Sensor.o
+ .debug_line    0x00000a45      0x57b ./Sources/TSS/TSS_SensorTSIL.o
+ .debug_line    0x00000fc0      0x2f4 ./Sources/TSS/TSS_SystemSetupData.o
+ .debug_line    0x000012b4      0x41c ./Sources/Events.o
+ .debug_line    0x000016d0       0x52 ./Sources/helper.o
+ .debug_line    0x00001722      0x402 ./Sources/main.o
+ .debug_line    0x00001b24      0x3c2 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x00001ee6      0x4bf ./Generated_Code/Cpu.o
+ .debug_line    0x000023a5      0x474 ./Generated_Code/GPIO1.o
+ .debug_line    0x00002819      0x2b8 ./Generated_Code/LED_GREEN.o
+ .debug_line    0x00002ad1      0x2b4 ./Generated_Code/LED_RED.o
+ .debug_line    0x00002d85      0x3fc ./Generated_Code/PE_LDD.o
+ .debug_line    0x00003181      0x1f9 ./Generated_Code/PTC.o
+ .debug_line    0x0000337a      0x294 ./Generated_Code/SegLCD1.o
+ .debug_line    0x0000360e      0x3dc ./Generated_Code/TI1.o
+ .debug_line    0x000039ea      0x3e5 ./Generated_Code/TSS1.o
+ .debug_line    0x00003dcf      0x27e ./Generated_Code/TU1.o
+ .debug_line    0x0000404d      0x442 ./Generated_Code/Vectors.o
 
-.debug_str      0x00000000    0x5afef
- .debug_str     0x00000000    0x374aa ./Sources/lcd/LCD.o
-                              0x378bb (size before relaxing)
- .debug_str     0x000374aa       0x16 ./Sources/lcd/s401.o
-                              0x37427 (size before relaxing)
- .debug_str     0x000374c0    0x15e9a ./Sources/TSS/TSS_Sensor.o
-                              0x4c896 (size before relaxing)
- .debug_str     0x0004d35a      0xb65 ./Sources/TSS/TSS_SensorTSIL.o
-                              0x4a11a (size before relaxing)
- .debug_str     0x0004debf     0x10fc ./Sources/TSS/TSS_SystemSetupData.o
-                              0x420f5 (size before relaxing)
- .debug_str     0x0004efbb     0x6215 ./Sources/Events.o
+.debug_str      0x00000000    0x5b020
+ .debug_str     0x00000000    0x374b2 ./Sources/lcd/LCD.o
+                              0x378c3 (size before relaxing)
+ .debug_str     0x000374b2       0x16 ./Sources/lcd/s401.o
+                              0x3742f (size before relaxing)
+ .debug_str     0x000374c8    0x15e9a ./Sources/TSS/TSS_Sensor.o
+                              0x4c89e (size before relaxing)
+ .debug_str     0x0004d362      0xb65 ./Sources/TSS/TSS_SensorTSIL.o
+                              0x4a122 (size before relaxing)
+ .debug_str     0x0004dec7     0x10fc ./Sources/TSS/TSS_SystemSetupData.o
+                              0x420fd (size before relaxing)
+ .debug_str     0x0004efc3     0x623e ./Sources/Events.o
                               0x47558 (size before relaxing)
- .debug_str     0x000551d0       0x91 ./Sources/main.o
+ .debug_str     0x00055201       0x91 ./Sources/main.o
                               0x47024 (size before relaxing)
- .debug_str     0x00055261     0x268e ./Project_Settings/Startup_Code/startup.o
+ .debug_str     0x00055292     0x268e ./Project_Settings/Startup_Code/startup.o
                               0x3230c (size before relaxing)
- .debug_str     0x000578ef      0x186 ./Generated_Code/Cpu.o
+ .debug_str     0x00057920      0x186 ./Generated_Code/Cpu.o
                               0x4725b (size before relaxing)
- .debug_str     0x00057a75      0x1b0 ./Generated_Code/GPIO1.o
+ .debug_str     0x00057aa6      0x1b0 ./Generated_Code/GPIO1.o
                               0x47204 (size before relaxing)
- .debug_str     0x00057c25       0xbf ./Generated_Code/LED_GREEN.o
+ .debug_str     0x00057c56       0xbf ./Generated_Code/LED_GREEN.o
                               0x37ae5 (size before relaxing)
- .debug_str     0x00057ce4       0x9f ./Generated_Code/LED_RED.o
+ .debug_str     0x00057d15       0x9f ./Generated_Code/LED_RED.o
                               0x37abf (size before relaxing)
- .debug_str     0x00057d83      0x177 ./Generated_Code/PE_LDD.o
+ .debug_str     0x00057db4      0x177 ./Generated_Code/PE_LDD.o
                               0x4710f (size before relaxing)
- .debug_str     0x00057efa       0x21 ./Generated_Code/PTC.o
+ .debug_str     0x00057f2b       0x21 ./Generated_Code/PTC.o
                               0x36aa9 (size before relaxing)
- .debug_str     0x00057f1b     0x2e0c ./Generated_Code/SegLCD1.o
+ .debug_str     0x00057f4c     0x2e0c ./Generated_Code/SegLCD1.o
                               0x39fcf (size before relaxing)
- .debug_str     0x0005ad27       0xa3 ./Generated_Code/TI1.o
+ .debug_str     0x0005ad58       0xa3 ./Generated_Code/TI1.o
                               0x47051 (size before relaxing)
- .debug_str     0x0005adca      0x125 ./Generated_Code/TSS1.o
+ .debug_str     0x0005adfb      0x125 ./Generated_Code/TSS1.o
                               0x4752f (size before relaxing)
- .debug_str     0x0005aeef       0xe4 ./Generated_Code/TU1.o
+ .debug_str     0x0005af20       0xe4 ./Generated_Code/TU1.o
                               0x389f9 (size before relaxing)
- .debug_str     0x0005afd3       0x1c ./Generated_Code/Vectors.o
+ .debug_str     0x0005b004       0x1c ./Generated_Code/Vectors.o
                               0x46fa2 (size before relaxing)
 
 .comment        0x00000000       0xe9
