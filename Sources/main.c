@@ -46,8 +46,11 @@
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int main(void);
 void respondToTimerInterrupt(void);
-extern int timerCheck(int);
+extern int timerUpdate(int);
+extern int timerDoneCheck(int);
 void writeToLCD(int);
+
+int mode = 0; //0: Counting Down, 1: Paused, 2: Setup, 3: Finish
 
 int TouchPosition = 0;
 int interruptCount = 0;
@@ -64,16 +67,32 @@ int main_counter,i,j,m;
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 
 void respondToTimerInterrupt(void){
-	interruptCount++;
-	if(timerCheck(interruptCount) == 1) {
-		CurrentTime--;
-		writeToLCD(CurrentTime);
-		interruptCount = 0;
-	}
-	else {
+	//Counting Down
+	if(mode == 0) {
+		interruptCount++;
+		if(timerUpdate(interruptCount) == 1) {
+			CurrentTime--;
+			writeToLCD(CurrentTime);
+			interruptCount = 0;
+		}
 
+		if(timerDoneCheck(CurrentTime)) {
+			mode = 3; //Finish the timer
+		}
+	}
+	//In setup
+	else if (mode == 2) {
+		TimerTime = TouchPosition;
+		CurrentTime = TouchPosition;
+	}
+	//Just Finished, Flashing Lights
+	else if(mode == 3) {
+		LED_GREEN_NegVal(GREEN);
+		LED_RED_NegVal(RED);
 	}
 }
+
+
 
 void writeToLCD(int content) {
 	sprintf(sLCDBuffer, "%04i", content);
