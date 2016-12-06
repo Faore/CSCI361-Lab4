@@ -27,7 +27,7 @@ ASM_DEPS += \
 Sources/%.o: ../Sources/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross ARM C Compiler'
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"M:/Users/cetho/workspace.kds/Lab 3/Static_Code/PDD" -I"M:/Users/cetho/workspace.kds/Lab 3/Static_Code/IO_Map" -I"M:/Users/cetho/workspace.kds/Lab 3/Sources" -I"M:/Users/cetho/workspace.kds/Lab 3/Generated_Code" -I"M:/Users/cetho/workspace.kds/Lab 3/Sources/TSS" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Static_Code/PDD" -I"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Static_Code/IO_Map" -I"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Sources" -I"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Generated_Code" -I"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Sources/TSS" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -54,7 +54,7 @@ all: Lab\ 3.elf secondary-outputs
 Lab\ 3.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "M:/Users/cetho/workspace.kds/Lab 3/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"M:/Users/cetho/workspace.kds/Lab 3/Project_Settings/Linker_Files" -L"M:\Users\cetho\workspace.kds\Lab 3\Sources\TSS" -Wl,-Map,"Lab 3.map" -specs=nano.specs -specs=nosys.specs -o "Lab 3.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/Miriam/workspace.kds/CSCI361-Lab4/Project_Settings/Linker_Files" -L"C:\Users\Miriam\workspace.kds\CSCI361-Lab4\Sources\TSS" -Wl,-Map,"Lab 3.map" -specs=nano.specs -specs=nosys.specs -o "Lab 3.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
