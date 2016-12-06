@@ -45,9 +45,14 @@
 #include "IO_Map.h"
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int main(void);
-void increment(void);
+void respondToTimerInterrupt(void);
+extern int timerCheck(int);
+void writeToLCD(int);
 
 int TouchPosition = 0;
+int interruptCount = 0;
+int TimerTime = 10;
+int CurrentTime = 10;
 
 LDD_TDeviceData *MySegLCDPtr , *RED, *GREEN;
 
@@ -58,16 +63,21 @@ char sLCDBuffer[16];
 int main_counter,i,j,m;
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 
-void increment(void){//function to increment the LCD display by 1111 and toggle the LED lights
-	m = TouchPosition;
-	sprintf(sLCDBuffer, "%04i", m);
+void respondToTimerInterrupt(void){
+	interruptCount++;
+	if(timerCheck(interruptCount) == 1) {
+		CurrentTime--;
+		writeToLCD(CurrentTime);
+		interruptCount = 0;
+	}
+	else {
+
+	}
+}
+
+void writeToLCD(int content) {
+	sprintf(sLCDBuffer, "%04i", content);
 	vfnLCD_Write_Msg((uint8 *) sLCDBuffer);
-	LED_GREEN_NegVal(GREEN);//toggle lights
-	LED_RED_NegVal(RED);
-	//m=m+1111;
-	//if (m>9999){//reset the display to 0000 after maxing out at 9999
-	//	m = 0;
-	//}
 }
 
 int main(void)
@@ -80,17 +90,22 @@ int main(void)
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Write your code here */
+  //Setup Touch Sensor
   TSS1_Configure();
   TSS1_InitDevices();
+  //Setup LCD
   MySegLCDPtr = SegLCD1_Init(NULL);
+  //Setup LEDs
   RED = LED_RED_Init(NULL);
   GREEN = LED_GREEN_Init(NULL);
+  //Turn off all LEDs
   vfnLCD_All_Segments_OFF();
-  sprintf(sLCDBuffer, "%04i", m);
+  //Set timer to the current time
+  sprintf(sLCDBuffer, "%04i", CurrentTime);
   vfnLCD_Write_Msg((uint8 *) sLCDBuffer);
-  LED_GREEN_NegVal(GREEN);
-  LED_RED_NegVal(RED);
-  m=m+1111;
+  //Negate the LEDs
+  //LED_GREEN_NegVal(GREEN);
+  //LED_RED_NegVal(RED);
 
   for(;;) {
 	  TSS_Task();

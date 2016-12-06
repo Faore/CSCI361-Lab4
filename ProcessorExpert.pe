@@ -6931,7 +6931,7 @@
         <ItemSymbol>Tmg_Period</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>init:1 Hz;prec:5%;RTS:none;clksrc_presc[SpeedMode0]Auto select;clksrc_presc[SpeedMode1]Auto select;clksrc_presc[SpeedMode2]Auto select;clksrc_presc[SpeedMode3]Auto select;clksrc_presc[SpeedMode4]Auto select;clksrc_presc[SpeedMode5]Auto select;clksrc_presc[SpeedMode6]Auto select;clksrc_presc[SpeedMode7]Auto select</Value>
+        <Value>init:10 Hz;prec:5%;RTS:none;clksrc_presc[SpeedMode0]Auto select;clksrc_presc[SpeedMode1]Auto select;clksrc_presc[SpeedMode2]Auto select;clksrc_presc[SpeedMode3]Auto select;clksrc_presc[SpeedMode4]Auto select;clksrc_presc[SpeedMode5]Auto select;clksrc_presc[SpeedMode6]Auto select;clksrc_presc[SpeedMode7]Auto select</Value>
         <RuntimeSetting>0</RuntimeSetting>
         <ReqDevPrescHigh>-1</ReqDevPrescHigh>
         <ReqDevPrescLow>-1</ReqDevPrescLow>
@@ -15811,7 +15811,7 @@
         <ItemSymbol>KeypadInputs0</ItemSymbol>
         <ReadOnly>true</ReadOnly>
         <ListItemCount>0</ListItemCount>
-        <UserReadOnly>false</UserReadOnly>
+        <UserReadOnly>true</UserReadOnly>
         <Expanded>true</Expanded>
       </ItemState>
       <ItemState>
@@ -15826,7 +15826,7 @@
         <ItemSymbol>ASliderInputs0</ItemSymbol>
         <ReadOnly>true</ReadOnly>
         <ListItemCount>0</ListItemCount>
-        <UserReadOnly>false</UserReadOnly>
+        <UserReadOnly>true</UserReadOnly>
         <Expanded>true</Expanded>
       </ItemState>
       <ItemState>
