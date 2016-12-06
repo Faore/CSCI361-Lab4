@@ -7,7 +7,7 @@
 **     Version     : Component 01.006, Driver 01.06, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-11-06, 19:41, # CodeGen: 13
+**     Date/Time   : 2016-12-06, 15:53, # CodeGen: 19
 **     Abstract    :
 **          This file implements the GPIO (PTC) module initialization
 **          according to the Peripheral Initialization settings, and
@@ -34,7 +34,13 @@
 **            Pin 9                                        : Do not initialize
 **            Pin 10                                       : Do not initialize
 **            Pin 11                                       : Do not initialize
-**            Pin 12                                       : Do not initialize
+**            Pin 12                                       : Initialize
+**              Pin direction                              : Input
+**              Output value                               : No initialization
+**              Pull resistor                              : Enabled
+**              Pull selection                             : Pull Up
+**              Slew rate                                  : No initialization
+**              Interrupt/DMA request                      : Interrupt on falling
 **            Pin 13                                       : Do not initialize
 **            Pin 16                                       : Do not initialize
 **            Pin 17                                       : Do not initialize
@@ -144,8 +150,8 @@
 */
 void PTC_Init(void)
 {
-  /* GPIOC_PDDR: PDD&=~8 */
-  GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x08));
+  /* GPIOC_PDDR: PDD&=~0x1008 */
+  GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x1008));
 }
 
 

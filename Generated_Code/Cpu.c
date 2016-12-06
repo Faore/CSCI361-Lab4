@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-12-05, 21:27, # CodeGen: 15
+**     Date/Time   : 2016-12-06, 15:53, # CodeGen: 19
 **     Abstract    :
 **
 **     Settings    :
@@ -459,8 +459,8 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
-  /* PORTC_ISFR: ISF=8 */
-  PORTC_ISFR = PORT_ISFR_ISF(0x08);
+  /* PORTC_ISFR: ISF=0x1008 */
+  PORTC_ISFR = PORT_ISFR_ISF(0x1008);
   /* Common initialization of the CPU registers */
   /* PORTC_PCR3: ISF=0,IRQC=0x0A,PE=1,PS=1 */
   PORTC_PCR3 = (uint32_t)((PORTC_PCR3 & (uint32_t)~(uint32_t)(
@@ -471,6 +471,15 @@ void PE_low_level_init(void)
                 PORT_PCR_PE_MASK |
                 PORT_PCR_PS_MASK
                ));
+  /* PORTC_PCR12: ISF=0,IRQC=0x0A,PE=1,PS=1 */
+  PORTC_PCR12 = (uint32_t)((PORTC_PCR12 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK |
+                 PORT_PCR_IRQC(0x05)
+                )) | (uint32_t)(
+                 PORT_PCR_IRQC(0x0A) |
+                 PORT_PCR_PE_MASK |
+                 PORT_PCR_PS_MASK
+                ));
   /* PORTB_PCR16: ISF=0,MUX=0 */
   PORTB_PCR16 &= (uint32_t)~(uint32_t)((PORT_PCR_ISF_MASK | PORT_PCR_MUX(0x07)));
   /* PORTB_PCR17: ISF=0,MUX=0 */

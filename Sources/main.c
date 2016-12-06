@@ -84,8 +84,8 @@ void respondToTimerInterrupt(void){
 	}
 	//In setup
 	else if (mode == 2) {
-		LED_RED_ClrVal(RED);
-		LED_GREEN_ClrVal(GREEN);
+		LED_RED_SetVal(RED);
+		LED_GREEN_SetVal(GREEN);
 		TimerTime = TouchPosition;
 		CurrentTime = TouchPosition;
 		writeToLCD(CurrentTime);

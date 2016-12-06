@@ -45,7 +45,7 @@
       <File Name="Sources/TSS_SystemSetup.h" FileDate="2016-12-05, 21:27:30" FileAge="1480998450287" FileType="45637" CompNumb="16" />
       <File Name="Static_Code/PDD/FTFA_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="ProjectInfo.xml" FileDate="2016-12-05, 21:27:30" FileAge="1480998450764" FileType="45637" />
-      <File Name="Generated_Code/Cpu.c" FileDate="2016-12-05, 21:27:30" FileAge="1480998450372" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2016-12-06, 15:53:48" FileAge="1481064828667" FileType="45637" CompNumb="2" />
       <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Generated_Code/TU1.h" FileDate="2016-12-05, 21:42:10" FileAge="1480999330107" FileType="45637" CompNumb="7" />
       <File Name="Documentation/doxygen/pex.css" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="16384" CompNumb="2" />
@@ -63,20 +63,20 @@
       <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Generated_Code/PE_Types.h" FileDate="2016-11-06, 19:48:32" FileAge="1478486912757" FileType="45637" />
-      <File Name="Generated_Code/PTC.h" FileDate="2016-11-06, 19:41:26" FileAge="1478486486583" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/PTC.h" FileDate="2016-12-06, 15:53:48" FileAge="1481064828616" FileType="45637" CompNumb="12" />
       <File Name="Generated_Code/LED_GREEN.c" FileDate="2016-11-03, 17:00:46" FileAge="1478214046000" FileType="45637" CompNumb="4" />
       <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Sources/TSS/TSS_SensorTSI.h" FileDate="2016-12-05, 21:27:26" FileAge="1480998446180" FileType="16384" CompNumb="16" />
       <File Name="Sources/TSS/TSS_SystemSetupVal.h" FileDate="2016-12-05, 21:27:26" FileAge="1480998446351" FileType="16384" CompNumb="16" />
-      <File Name="Generated_Code/PTC.c" FileDate="2016-11-06, 19:41:26" FileAge="1478486486595" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/PTC.c" FileDate="2016-12-06, 15:53:48" FileAge="1481064828641" FileType="45637" CompNumb="12" />
       <File Name="Static_Code/PDD/MCG_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Sources/Events.h" FileDate="2016-12-05, 21:27:30" FileAge="1480998450413" FileType="131328" />
       <File Name="Sources/TSS/TSS_SensorTSI.c" FileDate="2016-12-05, 21:27:26" FileAge="1480998446158" FileType="16384" CompNumb="16" />
       <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
-      <File Name="Sources/Events.c" FileDate="2016-12-06, 15:38:52" FileAge="1481063932281" FileType="131328" />
-      <File Name="Documentation/Lab 3_SIGNALS.txt" FileDate="2016-12-06, 15:41:33" FileAge="1481064093811" FileType="3072" />
-      <File Name="Sources/main.c" FileDate="2016-12-06, 15:38:13" FileAge="1481063893943" FileType="128" />
+      <File Name="Sources/Events.c" FileDate="2016-12-06, 15:42:28" FileAge="1481064148957" FileType="131328" />
+      <File Name="Documentation/Lab 3_SIGNALS.txt" FileDate="2016-12-06, 15:53:48" FileAge="1481064828688" FileType="3072" />
+      <File Name="Sources/main.c" FileDate="2016-12-06, 15:50:59" FileAge="1481064659507" FileType="128" />
       <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="45637" CompNumb="2" />
       <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
       <File Name="Sources/TSS/TSS_Sensor.h" FileDate="2016-12-05, 21:27:26" FileAge="1480998446049" FileType="16384" CompNumb="16" />
@@ -95,7 +95,7 @@
       <File Name="Sources/TSS/libTSS_KXX_M0.a" FileDate="2016-12-05, 21:27:25" FileAge="1480998445854" FileType="16384" CompNumb="16" />
       <File Name="Sources/TSS/TSS_SensorGPIO.h" FileDate="2016-12-05, 21:27:26" FileAge="1480998446109" FileType="16384" CompNumb="16" />
       <File Name="Project_Settings/Startup_Code/startup.c" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="16384" CompNumb="2" />
-      <File Name="Documentation/Lab 3_Settings.xml" FileDate="2016-12-06, 15:41:33" FileAge="1481064093889" FileType="3072" />
+      <File Name="Documentation/Lab 3_Settings.xml" FileDate="2016-12-06, 15:53:48" FileAge="1481064828758" FileType="3072" />
       <File Name="Documentation/doxygen/SegLCD1_component.txt" FileDate="2016-11-03, 17:00:46" FileAge="1478214046000" FileType="45637" CompNumb="5" />
       <File Name="Sources/TSS/TSS_SensorGPIO.c" FileDate="2016-12-05, 21:27:26" FileAge="1480998446082" FileType="16384" CompNumb="16" />
       <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="1048576" />
@@ -111,7 +111,7 @@
       <File Name="Generated_Code/TSS1.h" FileDate="2016-12-05, 21:27:30" FileAge="1480998450294" FileType="45637" CompNumb="16" />
       <File Name="Generated_Code/PE_LDD.c" FileDate="2016-11-06, 19:29:33" FileAge="1478485773974" FileType="45637" CompNumb="2" />
       <File Name="Generated_Code/TSS1.c" FileDate="2016-12-05, 21:27:30" FileAge="1480998450290" FileType="45637" CompNumb="16" />
-      <File Name="Documentation/doxygen/PTC_component.txt" FileDate="2016-11-06, 19:41:26" FileAge="1478486486603" FileType="45637" CompNumb="12" />
+      <File Name="Documentation/doxygen/PTC_component.txt" FileDate="2016-12-06, 15:53:48" FileAge="1481064828653" FileType="45637" CompNumb="12" />
       <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2016-11-03, 16:22:42" FileAge="1478211762000" FileType="8" CompNumb="2" />
       <File Name="Generated_Code/SegLCD1.h" FileDate="2016-11-03, 17:00:46" FileAge="1478214046000" FileType="45637" CompNumb="5" />
       <File Name="Generated_Code/SegLCD1.c" FileDate="2016-11-03, 17:00:46" FileAge="1478214046000" FileType="45637" CompNumb="5" />
@@ -129,5 +129,5 @@
       <File Name="Documentation/doxygen/LED_RED_component.txt" FileDate="2016-11-03, 17:00:46" FileAge="1478214046000" FileType="45637" CompNumb="3" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>19</CodeGenReference>
+  <CodeGenReference>20</CodeGenReference>
 </CodeGenerationInfo>

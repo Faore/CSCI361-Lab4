@@ -479,17 +479,27 @@ PE_DEBUGHALT();
       <Component_name v="GPIO1" />
       <Port v="PTC" />
       <Port_width v="32 bits" />
-      <Mask_of_allocated_pins v="8" />
+      <Mask_of_allocated_pins v="4104" />
       <boolgroup name="Interrupt service/event" v="Enabled">
         <Interrupt v="INT_PORTC_PORTD" />
         <Interrupt_priority v="medium priority" />
       </boolgroup>
-      <list name="Bit fields" v="1">
+      <list name="Bit fields" v="2">
         <group name="Bit field">
           <Field_name v="SW1" />
           <list name="Pins" v="1">
             <group name="Pin">
               <Pin v="LCD_P23/PTC3/LLWU_P7/UART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK" />
+              <boolgroup name="Initial pin direction" v="Input" />
+              <Initial_pin_event v="Falling edge" />
+            </group>
+          </list>
+        </group>
+        <group name="Bit field">
+          <Field_name v="SW3" />
+          <list name="Pins" v="1">
+            <group name="Pin">
+              <Pin v="LCD_P32/PTC12/TPM_CLKIN0" />
               <boolgroup name="Initial pin direction" v="Input" />
               <Initial_pin_event v="Falling edge" />
             </group>

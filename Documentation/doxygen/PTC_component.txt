@@ -92,7 +92,13 @@ registers of the peripheral(s) configured by the component.
 **            Pin 9                                        : Do not initialize
 **            Pin 10                                       : Do not initialize
 **            Pin 11                                       : Do not initialize
-**            Pin 12                                       : Do not initialize
+**            Pin 12                                       : Initialize
+**              Pin direction                              : Input
+**              Output value                               : No initialization
+**              Pull resistor                              : Enabled
+**              Pull selection                             : Pull Up
+**              Slew rate                                  : No initialization
+**              Interrupt/DMA request                      : Interrupt on falling
 **            Pin 13                                       : Do not initialize
 **            Pin 16                                       : Do not initialize
 **            Pin 17                                       : Do not initialize
