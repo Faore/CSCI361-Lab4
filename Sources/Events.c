@@ -99,7 +99,7 @@ void TI1_OnInterrupt(LDD_TUserData *UserDataPtr)
 void GPIO1_OnPortEvent(LDD_TUserData *UserDataPtr)
 //calls the increment function every time button is pressed
 {
-
+	handleButtonPress();
 }
 
 /*

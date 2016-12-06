@@ -3,7 +3,7 @@
   <Header>
     <Name>Lab 3</Name>
     <SavedBy>Miriam</SavedBy>
-    <ModificationStamp>16</ModificationStamp>
+    <ModificationStamp>17</ModificationStamp>
     <Date>2016-11-03</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1550-0615</PEversion>
@@ -14302,7 +14302,7 @@
       <ItemState>
         <ItemSymbol>AllocatedPinsMaskProp</ItemSymbol>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>8</Value>
+        <Value>4104</Value>
         <Base>HEX</Base>
         <Index>-1</Index>
       </ItemState>
@@ -14360,7 +14360,7 @@
       <ItemState>
         <ItemSymbol>BitFields</ItemSymbol>
         <ReadOnly>false</ReadOnly>
-        <ListItemCount>1</ListItemCount>
+        <ListItemCount>2</ListItemCount>
         <UserReadOnly>false</UserReadOnly>
         <Expanded>true</Expanded>
       </ItemState>
@@ -14474,6 +14474,123 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>Lock0_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>BitField1</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FieldName1</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>SW3</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FieldMaskProp1</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>4096</Value>
+        <Base>HEX</Base>
+        <Index>-1</Index>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FieldStartBit1</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>12</Value>
+        <Base>DEC</Base>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>AllocatedPins1</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <ListItemCount>1</ListItemCount>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>AllocatedPin1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Pin1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>LCD_P32/PTC12/TPM_CLKIN0</Value>
+        <SharedPrphMode>false</SharedPrphMode>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PinSignal1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value />
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PinFieldIndexProp1_0</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>0</Value>
+        <Base>DEC</Base>
+        <Index>-1</Index>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PinIndexProp1_0</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>12</Value>
+        <Base>DEC</Base>
+        <Index>-1</Index>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PinFieldMaskProp1_0</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>1</Value>
+        <Base>HEX</Base>
+        <Index>-1</Index>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>PinMaskProp1_0</ItemSymbol>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>4096</Value>
+        <Base>HEX</Base>
+        <Index>-1</Index>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>InitPinDirection1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Value>false</Value>
+        <Expanded>false</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>InitPinOutputState1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>InitialInterrupt1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>4</Index>
+        <EnumSymbVal>Falling</EnumSymbVal>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>LockInitSupport1_0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>Lock1_0</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>

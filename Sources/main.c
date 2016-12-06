@@ -49,8 +49,9 @@ void respondToTimerInterrupt(void);
 extern int timerUpdate(int);
 extern int timerDoneCheck(int);
 void writeToLCD(int);
+void handleButtonPress();
 
-int mode = 0; //0: Counting Down, 1: Paused, 2: Setup, 3: Finish
+int mode = 2; //0: Counting Down, 1: Paused, 2: Setup, 3: Finish
 
 int TouchPosition = 0;
 int interruptCount = 0;
@@ -78,12 +79,16 @@ void respondToTimerInterrupt(void){
 
 		if(timerDoneCheck(CurrentTime)) {
 			mode = 3; //Finish the timer
+			LED_GREEN_NegVal(GREEN);
 		}
 	}
 	//In setup
 	else if (mode == 2) {
+		LED_RED_ClrVal(RED);
+		LED_GREEN_ClrVal(GREEN);
 		TimerTime = TouchPosition;
 		CurrentTime = TouchPosition;
+		writeToLCD(CurrentTime);
 	}
 	//Just Finished, Flashing Lights
 	else if(mode == 3) {
@@ -92,7 +97,15 @@ void respondToTimerInterrupt(void){
 	}
 }
 
-
+void handleButtonPress() {
+	//In setup, change to count down
+	if(mode == 2) {
+		mode = 0;
+	}
+	if(mode == 3) {
+		mode = 2;
+	}
+}
 
 void writeToLCD(int content) {
 	sprintf(sLCDBuffer, "%04i", content);
@@ -117,7 +130,7 @@ int main(void)
   //Setup LEDs
   RED = LED_RED_Init(NULL);
   GREEN = LED_GREEN_Init(NULL);
-  //Turn off all LEDs
+  //Turn off all LCD segments
   vfnLCD_All_Segments_OFF();
   //Set timer to the current time
   sprintf(sLCDBuffer, "%04i", CurrentTime);

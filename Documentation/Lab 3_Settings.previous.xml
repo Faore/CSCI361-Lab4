@@ -285,7 +285,7 @@ PE_DEBUGHALT();
         <Interrupt v="INT_LPTimer" />
         <Interrupt_priority v="medium priority" />
       </boolgroup>
-      <Interrupt_period v="1 Hz" />
+      <Interrupt_period v="10 Hz" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
         <group name="Event mask">
@@ -336,7 +336,7 @@ PE_DEBUGHALT();
       </enumgroup>
       <enumgroup name="Counter restart" v="On-match">
         <Period_device v="LPTMR0_CMR" />
-        <Period v="1 Hz" />
+        <Period v="10 Hz" />
         <boolgroup name="Interrupt" v="Enabled">
           <Interrupt v="INT_LPTimer" />
           <Interrupt_priority v="medium priority" />

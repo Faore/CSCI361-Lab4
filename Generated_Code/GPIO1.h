@@ -7,7 +7,7 @@
 **     Version     : Component 01.128, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-11-06, 19:48, # CodeGen: 14
+**     Date/Time   : 2016-12-06, 15:41, # CodeGen: 18
 **     Abstract    :
 **         The HAL GPIO component will provide a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -19,16 +19,24 @@
 **          Component name                                 : GPIO1
 **          Port                                           : PTC
 **          Port width                                     : 32 bits
-**          Mask of allocated pins                         : 0x8
+**          Mask of allocated pins                         : 0x1008
 **          Interrupt service/event                        : Enabled
 **            Interrupt                                    : INT_PORTC_PORTD
 **            Interrupt priority                           : medium priority
-**          Bit fields                                     : 1
+**          Bit fields                                     : 2
 **            Bit field                                    : 
 **              Field name                                 : SW1
 **              Pins                                       : 1
 **                Pin                                      : 
 **                  Pin                                    : LCD_P23/PTC3/LLWU_P7/UART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK
+**                  Pin signal                             : 
+**                  Initial pin direction                  : Input
+**                  Initial pin event                      : Falling edge
+**            Bit field                                    : 
+**              Field name                                 : SW3
+**              Pins                                       : 1
+**                Pin                                      : 
+**                  Pin                                    : LCD_P32/PTC12/TPM_CLKIN0
 **                  Pin signal                             : 
 **                  Initial pin direction                  : Input
 **                  Initial pin event                      : Falling edge
@@ -132,15 +140,19 @@ extern "C" {
 
 /* Definition of bit field constants */
 #define SW1 ((LDD_GPIO_TBitField)0)
+#define SW3 ((LDD_GPIO_TBitField)1)
 
 /* Definition of implementation constants */
-#define GPIO1_ALLOCATED_PINS_MASK 0x08U /*!< Mask of all allocated pins from the port */
+#define GPIO1_ALLOCATED_PINS_MASK 0x1008U /*!< Mask of all allocated pins from the port */
 #define GPIO1_MODULE_BASE_ADDRESS FPTC_BASE_PTR /*!< Name of macro used as the base address */
 #define GPIO1_PORTCONTROL_BASE_ADDRESS PORTC_BASE_PTR /*!< Name of macro used as the base address */
 #define GPIO1_AVAILABLE_EVENTS_MASK LDD_GPIO_ON_PORT_EVENT /*!< Mask of all available events */
 #define GPIO1_FIELD_0_PIN_0 LDD_GPIO_PIN_3 /*!< Constant for the pin in the field used in the method ConnectPin */
+#define GPIO1_FIELD_1_PIN_0 LDD_GPIO_PIN_12 /*!< Constant for the pin in the field used in the method ConnectPin */
 #define GPIO1_SW1_START_BIT 3u         /*!< Index of the starting bit of the bit field (0 represents LSB) */
 #define GPIO1_SW1_MASK 0x08u           /*!< Mask of the bits allocated by the bit field (within the port) */
+#define GPIO1_SW3_START_BIT 12u        /*!< Index of the starting bit of the bit field (0 represents LSB) */
+#define GPIO1_SW3_MASK 0x1000u         /*!< Mask of the bits allocated by the bit field (within the port) */
 /* Representation of unaligned data value of the port.
    Unsigned integer of proper width depending on the size of the GPIO port allocated.
    Typically the value of n-th bit represents the data for the n-th pin within the port.
