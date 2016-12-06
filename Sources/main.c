@@ -112,11 +112,12 @@ void handleLeftButtonPress() {
 }
 
 void handleRightButtonPress() {
+	//This is the pause button.
 	//Counting Down
 	if(mode == 0) {
 		mode = 1;
 	}
-	if(mode == 1) {
+	else if(mode == 1) {
 		mode = 0;
 	}
 }
